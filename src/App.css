@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #b9731d; /* Verde principal */
+  --secondary-color: #121212; /* Fundo principal */
+  --card-bg: #181818; /* Fundo dos cards */
+  --text-color: #ffffff; /* Texto principal */
+  --text-muted: #b3b3b3; /* Texto secundário */
+  --highlight-color: #d7871e; /* Verde de destaque */
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --border-radius: 12px;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Geral */
+#root {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Logo */
+.logo {
+  height: 8em;
+  margin: 20px auto;
+  padding: 1em;
+  cursor: pointer;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+.logo:hover {
+  transform: rotate(5deg) scale(1.1);
+  filter: drop-shadow(0 0 20px var(--primary-color));
+}
+
+/* Card genérico */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px var(--shadow-color);
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* Exercícios */
+.container-exercicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.exercicio-item {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px var(--shadow-color);
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: var(--text-muted);
+}
+.exercicio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  color: var(--text-color);
+}
+
+.exercicio-item img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.container-exercicios h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Usuários */
+.container-usuarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.usuario-item {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px var(--shadow-color);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Merriweather', serif;
+}
+
+.usuario-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.usuario-item img {
+  width: 80px; /* Tamanho da foto */
+  height: 80px;
+  border-radius: 50%; /* Torna a imagem circular */
+  object-fit: cover; /* Garante que a imagem fique bem ajustada */
+  margin-bottom: 15px;
+  border: 2px solid var(--highlight-color);
+}
+
+.usuario-item h2 {
+  font-size: 1.5em;
+  margin: 10px 0 5px;
+  color: var(--text-color);
+}
+
+.usuario-item p {
+  font-size: 1em;
+  margin: 5px 0;
+  color: var(--text-muted);
+}
+
+.usuario-item a {
+  font-size: 0.9em;
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.usuario-item a:hover {
+  color: var(--text-color);
+}
+
+/* Botões organizados */
+.usuario-item .button-container {
+  display: flex;
+  justify-content: space-between; /* Mantém os botões afastados */
+  gap: 10px; /* Espaço entre os botões */
+  margin-top: 15px; /* Espaço superior em relação ao conteúdo */
+}
+
+.usuario-item .button {
+  flex: 1; /* Os botões terão tamanhos iguais */
+  text-align: center; /* Centraliza o texto dos botões */
+  padding: 10px 15px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 0.9em;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usuario-item .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
